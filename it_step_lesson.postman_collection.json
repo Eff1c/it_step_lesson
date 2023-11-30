@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "b68454ea-7fe6-45b2-9a15-6fb700b8899c",
+		"name": "it_step",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17767361",
+		"_collection_link": "https://universal-trinity-351628.postman.co/workspace/BM-Group~93adbf07-758b-4a42-8c77-5b4ad39b83a4/collection/17767361-b68454ea-7fe6-45b2-9a15-6fb700b8899c?action=share&source=collection_link&creator=17767361"
+	},
+	"item": [
+		{
+			"name": "/student_grades",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/student_grades",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"student_grades"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Тест\",\n    \"surname\": \"Тестовенко\",\n    \"middle_name\": \"Тестович\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/student",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/student/<int:student_id>",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"x\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/student/2",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"student",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/student/<int:student_id>",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/student/2",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"student",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/grade/<student_id: int>",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/student",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/grade/<int:student_id>/<int:grade_id>",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"value\": 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/grade/2/2",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"grade",
+						"2",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://127.0.0.1:5000",
+			"type": "string"
+		}
+	]
+}
