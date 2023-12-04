@@ -9,4 +9,6 @@
 - DATABASE_NAME
 
 ### Запуск проекту
-Щоб запустити проект в консолі введіть команду - `docker-compose --env-file=prod.env up -d`
+Щоб запустити проект в консолі введіть команди:
+- `docker-compose --env-file=prod.env up -d`
+- `docker exec -it app_container_name python db_first_init.py` (при першому запуску, для ініціалізації БД)
