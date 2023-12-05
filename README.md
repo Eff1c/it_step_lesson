@@ -4,6 +4,7 @@
 В кореневій директорії проекту створіть файл prod.env
 Вкажіть у ньому такі змінні:
 - SECRET_KEY
+- DATABASE_HOST
 - DATABASE_USER
 - DATABASE_PASSWORD
 - DATABASE_NAME
