@@ -32,7 +32,7 @@ def get_student_grades():
             grades_sum = sum(array_of_grades_value)
             mean_grade = grades_sum / grades_quantity
 
-        record["mean_grade"] = mean_grade
+        record["mean_grade"] = mean_grade or None
 
     return jsonify(response)
 
