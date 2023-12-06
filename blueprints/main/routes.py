@@ -22,6 +22,18 @@ def get_student_grades():
     converter = StudentSchema(many=True)
     response = converter.dump(query)
 
+    for record in response:
+        grades = record.pop("grades", [])
+        grades_quantity = len(grades)
+        mean_grade = 0
+
+        if grades_quantity:
+            array_of_grades_value = [grade_record.get("value") for grade_record in grades]
+            grades_sum = sum(array_of_grades_value)
+            mean_grade = grades_sum / grades_quantity
+
+        record["mean_grade"] = mean_grade
+
     return jsonify(response)
 
 
