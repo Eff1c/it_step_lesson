@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS
 from flask_marshmallow import Marshmallow
 from flask_sqlalchemy import SQLAlchemy
 
@@ -15,6 +16,9 @@ def create_app():
     app = Flask(__name__)
 
     app.config.from_object(Config)
+
+    # Enable CORS for all routes
+    CORS(app)
 
     db.init_app(app)
 
