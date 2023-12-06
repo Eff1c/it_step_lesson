@@ -111,34 +111,6 @@
 				}
 			},
 			"response": []
-		},
-		{
-			"name": "/grade/<int:student_id>/<int:grade_id>",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"value\": 4\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{host}}/grade/2/2",
-					"host": [
-						"{{host}}"
-					],
-					"path": [
-						"grade",
-						"2",
-						"2"
-					]
-				}
-			},
-			"response": []
 		}
 	],
 	"event": [
