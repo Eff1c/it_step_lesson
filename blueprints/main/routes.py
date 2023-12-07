@@ -31,6 +31,7 @@ def get_student_grades():
             array_of_grades_value = [grade_record.get("value") for grade_record in grades]
             grades_sum = sum(array_of_grades_value)
             mean_grade = grades_sum / grades_quantity
+            mean_grade = round(mean_grade, 2)
 
         record["mean_grade"] = mean_grade or None
 
